@@ -23,9 +23,9 @@ export default function Footer() {
                         className="navbar-logo-icon"
                         style={{ width: 28, height: 28, fontSize: '0.75rem' }}
                     >
-                        F
+                        Y
                     </span>
-                    ForgefoLio
+                    Yahya
                 </div>
 
                 <p className="footer-tagline">
@@ -100,7 +100,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <span>© {new Date().getFullYear()} ForgefoLio. All rights reserved.</span>
+                    <span>© {new Date().getFullYear()} Yahya. All rights reserved.</span>
                     <span className="footer-built">
                         Built with React + Django
                     </span>

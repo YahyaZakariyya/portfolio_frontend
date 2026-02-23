@@ -76,7 +76,16 @@ export default function ExperienceTimeline() {
                                         )}
                                     </div>
                                 </div>
-                                <p className="timeline-desc">{exp.description}</p>
+                                {exp.description && (
+                                    <p className="timeline-desc">{exp.description}</p>
+                                )}
+                                {exp.description_bullets && exp.description_bullets.length > 0 && (
+                                    <ul className="timeline-bullets" style={{ margin: '10px 0', paddingLeft: '20px', color: 'var(--color-text-dim)', fontSize: '0.9rem' }}>
+                                        {exp.description_bullets.map((bullet, idx) => (
+                                            <li key={idx} style={{ marginBottom: '6px' }}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                )}
                                 <div className="timeline-tech">
                                     {exp.technologies_used.map((t) => (
                                         <span key={t} className="tag">

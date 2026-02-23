@@ -17,6 +17,9 @@ export default function About() {
     const fetcher = useCallback(() => api.getProfile(), []);
     const { data: profile, loading, error, refetch } = useApi(fetcher);
 
+    const projectsFetcher = useCallback(() => api.getProjects(), []);
+    const { data: projects, loading: pLoading } = useApi(projectsFetcher);
+
     return (
         <SectionWrapper
             id="about"
@@ -52,7 +55,9 @@ export default function About() {
                                 <div className="about-stat-label">Years Experience</div>
                             </div>
                             <div className="about-stat-card">
-                                <div className="about-stat-value">42</div>
+                                <div className="about-stat-value">
+                                    {pLoading ? <Skeleton variant="text-sm" width="30px" /> : projects?.length || 0}
+                                </div>
                                 <div className="about-stat-label">Projects Completed</div>
                             </div>
                         </div>
