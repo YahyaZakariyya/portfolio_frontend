@@ -9,6 +9,7 @@ const Projects = lazy(() => import('./components/Projects'));
 const Architecture = lazy(() => import('./components/Architecture'));
 const ExperienceTimeline = lazy(() => import('./components/ExperienceTimeline'));
 const Education = lazy(() => import('./components/Education'));
+const Certifications = lazy(() => import('./components/Certifications'));
 const Contact = lazy(() => import('./components/Contact'));
 
 function SectionFallback() {
@@ -47,6 +48,9 @@ export default function App() {
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <Education />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <Certifications />
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <Contact />

@@ -24,7 +24,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="navbar" id="navbar">
+        <nav className={`navbar ${mobileOpen ? 'open' : ''}`} id="navbar">
             <div className="container navbar-inner">
                 <a
                     href="#hero"
@@ -34,8 +34,8 @@ export default function Navbar() {
                         scrollToSection('hero');
                     }}
                 >
-                    <span className="navbar-logo-icon">F</span>
-                    <span>ForgefoLio</span>
+                    <span className="navbar-logo-icon">Y</span>
+                    <span>Yahya</span>
                 </a>
 
                 <ul className={`navbar-links ${mobileOpen ? 'open' : ''}`}>

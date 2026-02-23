@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Profile, Skill, ProjectSummary, ProjectDetail, Experience, Education } from '../types';
+import type { Profile, Skill, ProjectSummary, ProjectDetail, Experience, Education, Certification } from '../types';
 
 const apiClient = axios.create({
     baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api',
@@ -55,6 +55,11 @@ export const api = {
 
     getEducation: async (): Promise<Education[]> => {
         const { data } = await apiClient.get<Education[]>('/education/');
+        return data;
+    },
+
+    getCertifications: async (): Promise<Certification[]> => {
+        const { data } = await apiClient.get<Certification[]>('/certifications/');
         return data;
     },
 };

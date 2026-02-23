@@ -50,10 +50,22 @@ export interface Experience {
   start_date: string;
   end_date: string | null;
   description: string;
+  description_bullets: string[];
   technologies_used: string[];
   company_url: string;
   is_current: boolean;
   duration: string;
+  order: number;
+}
+
+export interface Certification {
+  id: number;
+  name: string;
+  issuing_organization: string;
+  issue_date: string;
+  expiration_date: string | null;
+  credential_id: string;
+  credential_url: string;
   order: number;
 }
 
